@@ -13,7 +13,27 @@ function App() {
     // counter++
     // setCounter(counter)
     // or
-    setCounter(counter + 1)
+    // setCounter(counter + 1)
+
+    /*
+    IMP::interview question 
+
+    Q)=>Will it add 4 values to counter and make it 19 from 15 or not.
+    A)=>No, because react it not consider them as four different function , instead it will consider them as one and then add only one value to it i.e from 15 to 16.
+    */
+
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+
+    /* Inorder to add more than 1 value in your counter in above way , then you need a callback function .
+    That callback will take the counter value(15) , add the 1 , and then again next callback will take the previous value(16) and add 1 to it.
+    */
+    setCounter((prevCounter) => {return prevCounter + 1 })
+    setCounter((prevCounter) => {return prevCounter + 1 })
+    setCounter((prevCounter) => {return prevCounter + 1 })
+    setCounter((prevCounter) => {return prevCounter + 1 })
   }
 
   const removeValue = () => {
